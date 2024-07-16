@@ -1,11 +1,19 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from"./components/Header"
+import Home from "./pages/Home"
 
 function App() {
   return (
    <>
-   <h1 className='text-danger'>Hellow</h1>
-   <p>This is tes git</p>
+   <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" exact={true} element={ <Home /> } />
+      </Routes>
+   
+   </BrowserRouter>
    
    
    </>
