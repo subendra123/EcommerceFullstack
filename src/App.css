@@ -23,6 +23,31 @@ body {
 .bg_blue {
     background-color: #233a95;
 }
+.container {
+    max-width: 85%;
+}
+
+@media (min-width:1300px) {
+    .container .container-lg, .container-md, .container-sm, .container-x1 {
+        max-width: 1200px  ;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc !important;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+.header_wrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+
+}
 
 .header_wrapper .header {
     width: 100%;
@@ -35,7 +60,7 @@ body {
 }
 .header_wrapper .header .part2 .countryDrop {
     width: 170px;
-    height: 60px;
+    height: 45px;
     min-width: 170px;
     color: rgba(0, 0, 0, 0.2) !important;
     border: 1px solid rgba(0, 0, 0, 0.2) !important;
@@ -68,14 +93,16 @@ body {
     opacity: 0.7;
 }
 
-.header .headerSearch {
+ .headerSearch {
     width: 60%;
-    height: 60px;
+    height: 50px;
     background: #f3f4f7;
-    padding: 10px;
+    padding: 5px;
     position: relative;
+    border-radius: 10px;
+
 }
-.header .headerSearch input {
+ .headerSearch input {
     width: 100%;
     height: 40px;
     background: transparent !important;
@@ -86,9 +113,9 @@ body {
     border: none !important;
     padding: 0px 20px !important;
 }
-.header .headerSearch button {
+ .headerSearch button {
     position: absolute;
-    top: 10px;
+    top: 6px;
     right: 15px;
     z-index: 100;
     min-width: 40px !important;
@@ -98,7 +125,7 @@ body {
     color: #000;
 
 }
-.header .headerSearch button svg {
+ .headerSearch button svg {
     font-size: 25px;
 } 
 .header .part3 .circle {
@@ -127,46 +154,121 @@ body {
 .cartTab button svg {
     color: #ea2b0f !important;
 }
-/* .header .part3 .cart_circle {
-    align-items: center;
-    justify-content: center;
-    min-width: 45px !important;
-    height: 45px !important;
-    width: 45px !important;
-    border-radius: 50% !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    color: #000;
-    background-color: #fff1ee !important;
-} */
-/* 
-.header .part3 .circle svg {
-    font-size: 22px;
-}
-.cartTab  .price{
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.8) !important;
-    font-weight: 700;
-
-}
-.cartTab button {
-    background-color: #fff1ee !important;
-    border-radius: 30px;
-    width: 30px;
-    height: 50px;
-
-}
-.cartTab button svg {
-    color: #ea2b0f !important;
-} */
-/* .cartTab .count {
+.cartTab .count {
     position: absolute;
-    top: 0px;
-    right: 0;
+    top: -5px;
+    right: -4px;
     background: #ea2b0f;
     border-radius: 50%;
     color: #fff;
-    width: 25px !important;
-    height: 25px !important;
-} */
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 13px;
+}
+
+.locationModal .MuiPaper-elevation {
+    padding: 25px;
+    position: relative;
+}
+.locationModal h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}
+.locationModal p {
+    width: 90%;
+    font-size: 15px;
+    padding: 5px 1px;
+
+}
+.locationModal .countryList {
+    margin-bottom: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.locationModal .countryList li {
+    width: 100%;
+    list-style: none;
+}
+.locationModal .countryList li button {
+    padding: 15px 20px !important;
+    width: 100%;
+    text-transform: capitalize !important;
+    color: #000 !important;
+    justify-content: flex-start !important;
+
+}
+.locationModal .countryList li button:hover  {
+   background: #f1f1f1 !important; 
+}
+.locationModal .countryList li button.active{
+    background: #e2e2e2;
+}
+.locationModal .close_ {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000 !important;
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+}
+.locationModal .close_ {
+    font-size: 22px;
+}
 
 
+/*  Second Navigation */
+
+nav .allCatTab {
+    background: #2bbef9;
+    padding: 10px 15px !important;
+    border-radius: 30px !important;
+}
+nav .allCatTab *{ 
+    color: #fff;
+}
+nav .allCatTab:hover {
+    background: #2bbef9;
+}
+nav .allCatTab .text {
+    font-weight: 600;
+}
+nav .allCatTab .icon1 svg {
+    font-size: 20px !important;
+}
+nav .allCatTab .icon2 svg {
+    font-size: 15px !important;
+}
+ nav .navpart2 ul{
+    margin-bottom: 0;
+    display: flex;
+    
+   
+}
+nav .navpart2 .list_inline_item {
+    font-size: 16px;
+    text-decoration: none;
+    list-style-type: none;
+   text-transform: capitalize;
+   padding: 8px 10px;
+   transition: all 0.2s ease-in-out;
+   border-radius: 25px;
+   
+}
+nav .navpart2 .list_inline_item .list_link {
+    color: #2bbef9;
+    text-decoration: none;
+}
+nav .navpart2 .list_inline_item  :hover {
+    background-color: #024763;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 10px 7px;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
