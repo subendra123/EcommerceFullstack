@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
 
 *{
     margin: 0;
@@ -242,6 +244,47 @@ nav .allCatTab .icon1 svg {
 nav .allCatTab .icon2 svg {
     font-size: 15px !important;
 }
+
+ nav .navpart1 .catWrapper  {
+    position: relative;
+  }
+  nav .navpart1 .catWrapper .sidebarNav  {
+   width: 80%;
+   height:auto;
+   background: white;
+   position: absolute;
+   top: 55px;
+   left: 0px;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   padding: 15px;
+   z-index: 100;
+  }
+
+  nav .navpart1 .catWrapper .sidebarNav ul li {
+    width: 100%;
+    list-style: none;
+    padding-top: 16px;
+    padding-left: 4px;
+    font-size: 14px;
+   
+  }
+  nav .navpart1 .catWrapper .sidebarNav .sidebar_list_Link .list_link {
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+    justify-content: flex-start;
+    font-weight: bold;
+  
+  }
+  nav .navpart1 .catWrapper .sidebarNav ul li .list_link:hover {
+    color: #06b0f3;
+    transition: 1s ease-in-out;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+
  nav .navpart2 ul{
     margin-bottom: 0;
     display: flex;
@@ -272,3 +315,119 @@ nav .navpart2 .list_inline_item  :hover {
     letter-spacing: 3px;
     font-size: 12px;
 }
+.homeBanner_section {
+    margin-top: 0.3rem;
+    position: relative;
+    overflow: hidden;
+}
+.homeBanner_section .slick-arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important;
+    background: #000;
+    border-radius: 100%;
+    
+}
+slick-next:before, .slick-prev:before  {
+    color: white;
+   
+}
+.homeBanner_section .slick-arrow.slick-next {
+    right: 25px;
+}
+.homeBanner_section .slick-arrow.slick-prev {
+    left: 25px;
+}
+
+.image_style {
+    width: 800px ;
+    height: 500px;
+    
+}
+.image_style img {
+    object-fit: cover;
+}
+.homeBanner_section * {
+    outline: none !important;
+}
+
+.homeProducts {
+    padding: 25px 0px;
+    width: 100%;
+}
+.homeProducts .banner {
+    width: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.text_small {
+    font-size: 13px;
+    
+}
+.info h4 {
+    color: rgba(0, 0, 0, 0.6);
+}
+.viewAllBtn {
+   position: absolute;
+    right: 0%;
+    padding: 5px 5px !important;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 30px !important;
+    color: #414141 !important;
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+   
+    width: 200px;
+}
+.viewAllBtn svg {
+    font-size: 20pxs;
+}
+
+.productRow {
+   
+    width: 100%;
+
+}
+.productRow span {
+    padding: 0 0px;
+}
+
+.productItem {
+    width: 100%;
+    height: 25rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  
+}
+.productItem .info {
+    padding: 9px;
+}
+.productItem .info h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    padding-top: 10px;
+}
+ .instock span {
+    background-color: red!;
+}
+ .instock {
+  color: rgb(5, 253, 5) !important;
+  font-size: 16px !important;
+  font-weight: bold;
+    
+}
+
+.css-1nbsiwm-MuiRating-root {
+    color: red !important;
+    font-size: 10px !important;
+    width: 100px !important;
+
+}
+
