@@ -427,7 +427,7 @@ slick-next:before, .slick-prev:before  {
 .productItem .actions {
     position: absolute; 
     top: 50px;
-    right: 15px;
+    right: -100%;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -447,7 +447,7 @@ slick-next:before, .slick-prev:before  {
     border-radius: 100% !important;
     background-color: white !important;
     box-shadow: 0 1px 3px rgba(0 0 0 /12%), 0 1px 2px rgba(0 0 0 /24%) !important;
-    transition: all 0.0s !important;
+    transition: all 0.3s !important;
 
 }
 
@@ -471,6 +471,11 @@ slick-next:before, .slick-prev:before  {
     right: 10px;
     
 }
+.productItem .imgWrapper:hover img  {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    
+}
 
  
 .productItem .info {
@@ -482,6 +487,9 @@ slick-next:before, .slick-prev:before  {
     color: black;
     cursor: pointer;
     padding-top: 10px;
+}
+.productItem .info h4:hover {
+    color: #06b0f3;
 }
  .instock span {
     background-color: red!;
@@ -514,6 +522,96 @@ slick-next:before, .slick-prev:before  {
     font-size: 16px;
     font-weight: 900;
 }
+
+/* New Products */
+
+.newProduct {
+    margin-top: 4rem;
+}
+.homecat {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    background-color: rgb(78, 73, 73) !important;
+    color: white !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 100%;
+    font-size: 15px !important;
+}
+
+
+
+swiper-button-prev:after, .swiper-button-next:after { 
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next { 
+    background-color: rgb(78, 73, 73) !important;
+    color: white !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 100%;
+    font-size: 15px !important;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+
+
+.homecat .swiper .item {
+    padding: 15px;
+    width: 100%;
+    height: auto !important;
+    background-color: #feefea;
+    border-radius: 10px;
+}
+.homecat .swiper-button-prev, .homecat .swiper-button-next {
+    top: -30px !important;
+}
+.homecat .swiper {
+    overflow: inherit !important;
+}
+.homecat .swiper-button-prev {
+    right: 70px !important;
+    left: inherit !important;
+}
+
+.homecat .swiper .item img {
+    width: 100% !important;
+
+    cursor: pointer;
+    
+    
+}
+.homecat .swiper .item img:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+}
+
+.homecat .swiper .item h6 {
+    padding-top: 15px;
+    font-size: 15px !important;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+.homecat .feature_category h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    
+}
+
+.bannerSec {
+    gap: 15px;
+}
+
+
 
 
 
