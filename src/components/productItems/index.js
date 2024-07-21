@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeBanner from "../../components/HomeBanner";
 import Button from "@mui/material/Button";
 import { HiArrowRight } from "react-icons/hi2";
@@ -9,9 +9,27 @@ import { Navigation } from "swiper/modules";
 import Rating from "@mui/material/Rating";
 import { TfiFullscreen } from "react-icons/tfi";
 import { CiHeart } from "react-icons/ci";
+import ProductModal from '../../components/ProductModal';
+import  BestSeller  from "../Data/BestSeller";
+
 
 const ProductItem = () => {
+  const[openProductDetails, setOpenProductDetails] = useState(false);
+
+ 
+
+  const viewProductDetails = (id) => {
+    setOpenProductDetails(true);
+  } 
+
+  const closeProductModal = () => {
+    setOpenProductDetails(false);
+  }
+
   return (
+    <>
+   
+    
     <div className="homeProducts">
       <div className="container">
         <div className="row">
@@ -37,7 +55,9 @@ const ProductItem = () => {
               </Button>
             </div>
 
-            <div className="product_row w-100 mt-4">
+
+           
+             <div className="product_row w-100 mt-4">
               <Swiper
                 slidesPerView={4}
                 spaceBetween={70}
@@ -60,7 +80,7 @@ const ProductItem = () => {
 
                       <div className="actions">
                         <Button>
-                          <TfiFullscreen />
+                          <TfiFullscreen  onClick={() => viewProductDetails(1)} />
                         </Button>
                         <Button className="mt-2">
                           <CiHeart />
@@ -327,7 +347,7 @@ const ProductItem = () => {
                   </div>
                 </SwiperSlide>
               </Swiper>
-            </div>
+            </div> 
           </div>
         </div>
 
@@ -650,14 +670,19 @@ const ProductItem = () => {
           </div>
         </div>
 
-              
             {/*  New comments  */}
 
-          
+
              
 
       </div>
     </div>
+
+                {
+                  openProductDetails === true &&  <ProductModal closeProductModal ={closeProductModal} />
+                }
+   
+    </>
   );
 };
 

@@ -15,6 +15,7 @@ import HomeCat from '../../components/HomeCat';
 import NewsLetter from '../../components/NewsLetter';
 
 
+
 const Home = () => {
  
   return (
@@ -25,7 +26,7 @@ const Home = () => {
    <HomeCat />
   <ProductItem />
   <NewsLetter />
- 
+
   
     
    
